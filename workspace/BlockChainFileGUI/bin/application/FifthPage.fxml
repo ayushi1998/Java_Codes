@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5ea89b" height="32.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="254.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5ea89b" height="39.0" layoutX="8.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="234.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4a9e99" height="175.0" layoutX="242.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="411.0" />
+      <Button layoutX="512.0" layoutY="70.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="89.0" text="Next">
+         <font>
+            <Font name="Geneva" size="13.0" />
+         </font>
+      </Button>
+      <Circle fill="#294b6b" layoutX="22.0" layoutY="18.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="213.0" layoutY="152.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="213.0" layoutY="18.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c615b" height="457.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+      <Circle fill="#294b6b" layoutX="30.0" layoutY="152.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="194.0" layoutY="18.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="182.0" layoutY="18.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="170.0" layoutY="18.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="198.0" layoutY="152.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="186.0" layoutY="152.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="174.0" layoutY="152.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <TableView layoutX="8.0" layoutY="171.0" prefHeight="278.0" prefWidth="490.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4a9e99" height="286.0" layoutX="499.0" layoutY="165.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="151.0" />
+   </children>
+</Pane>

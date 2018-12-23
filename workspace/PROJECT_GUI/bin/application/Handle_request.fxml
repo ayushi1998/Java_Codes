@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Handle_requestcontroller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c3dbdd" height="408.0" layoutX="-10.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="620.0" />
+      <TableView fx:id="table" layoutX="29.0" layoutY="77.0" prefHeight="172.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="Sno" prefWidth="75.0" text="SNo" />
+          <TableColumn fx:id="date" prefWidth="64.0" text="Date" />
+            <TableColumn fx:id="time" prefWidth="83.0" text="Time" />
+            <TableColumn fx:id="purpose" prefWidth="128.0" text="Reason for Request" />
+            <TableColumn fx:id="room" prefWidth="119.0" text="PreferredRoom" />
+            <TableColumn fx:id="status" prefWidth="64.0" text="Status" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#134451" height="408.0" layoutX="-14.0" layoutY="-4.0" stroke="#0a4d4c" strokeType="INSIDE" width="22.0" />
+      <Button fx:id="back" layoutX="510.0" layoutY="359.0" mnemonicParsing="false" onAction="#back_click" prefHeight="27.0" prefWidth="67.0" text="Back" />
+      <Label layoutX="196.0" layoutY="26.0" prefHeight="27.0" prefWidth="305.0" text="Requests Handle: Admin" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#134451" height="408.0" layoutX="586.0" layoutY="-4.0" stroke="#0a4d4c" strokeType="INSIDE" width="22.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5e6b" height="14.0" layoutX="-10.0" layoutY="-7.0" stroke="#0a4d4c" strokeType="INSIDE" width="620.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c5e6b" height="14.0" layoutX="-10.0" layoutY="393.0" stroke="#0a4d4c" strokeType="INSIDE" width="620.0" />
+      <TextField fx:id="sno" layoutX="110.0" layoutY="303.0" prefHeight="27.0" prefWidth="86.0" />
+      <Label layoutX="29.0" layoutY="308.0" text="Enter SNo" />
+      <Label layoutX="379.0" layoutY="308.0" text="Accept/Reject" />
+      <ComboBox fx:id="ar" layoutX="477.0" layoutY="303.0" prefHeight="27.0" prefWidth="86.0" />
+      <Button fx:id="confirm" layoutX="433.0" layoutY="359.0" mnemonicParsing="false" onAction="#confirm_click" text="Confirm" />
+      <Label layoutX="211.0" layoutY="308.0" text="ClassRoom" />
+      <ComboBox fx:id="classroom" layoutX="286.0" layoutY="303.0" prefHeight="27.0" prefWidth="86.0" />
+   </children>
+</Pane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View_schedule_controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#769fa4" height="408.0" layoutX="-4.0" layoutY="-7.0" stroke="#2b4c57" strokeType="INSIDE" strokeWidth="7.0" width="609.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="14.0" prefHeight="41.0" prefWidth="230.0" text="TIME TABLE">
+         <font>
+            <Font name="Optima Regular" size="24.0" />
+         </font>
+      </Label>
+      <TableView fixedCellSize="0.0" layoutX="27.0" layoutY="83.0" prefHeight="255.0" prefWidth="548.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="COURSE" />
+          <TableColumn prefWidth="38.0" text="MON" />
+            <TableColumn prefWidth="40.0" text="TUE" />
+            <TableColumn prefWidth="51.0" text="WED" />
+            <TableColumn prefWidth="50.0" text="THUR" />
+            <TableColumn prefWidth="42.0" text="FRI" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#183136" height="408.0" layoutX="-4.0" layoutY="-7.0" stroke="#0a4d4c" strokeType="INSIDE" width="21.0" />
+      <Button fx:id="back" layoutX="508.0" layoutY="359.0" mnemonicParsing="false" onAction="#back_click" text="Back" />
+      <Circle fill="#356f83" layoutX="214.0" layoutY="35.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="373.0" layoutY="35.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="28.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="55.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="83.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="363.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="386.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="342.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="317.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="7.0" layoutY="112.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a5661" height="167.0" layoutX="3.0" layoutY="126.0" stroke="#0a4d4c" strokeType="INSIDE" width="8.0" />
+      <Circle fill="#356f83" layoutX="373.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#356f83" layoutX="214.0" layoutY="32.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>

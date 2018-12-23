@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b6c9cd" height="400.0" layoutX="2.0" layoutY="7.0" stroke="#0a4d4c" strokeType="INSIDE" width="609.0" />
+      <VBox layoutX="120.0" layoutY="134.0" prefHeight="243.0" prefWidth="365.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="365.0" spacing="100.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="124.0" text="Enter Week Day">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox editable="true" prefHeight="34.0" prefWidth="170.0" promptText="Weekday" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="364.0" spacing="100.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="124.0" text="Enter Class">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox editable="true" prefHeight="34.0" prefWidth="170.0" promptText="Classroom Code" />
+               </children>
+            </HBox>
+            <HBox prefHeight="55.0" prefWidth="365.0" spacing="100.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="124.0" text="Enter Time Slot">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox editable="true" prefHeight="36.0" prefWidth="169.0" promptText="TIme Slot" />
+               </children>
+            </HBox>
+            <HBox prefHeight="59.0" prefWidth="365.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Submit" />
+                  <Region prefHeight="59.0" prefWidth="59.0">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Region>
+                  <Label prefHeight="28.0" prefWidth="212.0" text="Classroom Status Displayed Here" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="190.0" layoutY="14.0" prefHeight="51.0" prefWidth="201.0" text="View Room Availibility" textFill="#00415b">
+         <font>
+            <Font name="Didot Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="518.0" layoutY="357.0" mnemonicParsing="false" text="Back" />
+      <Label layoutX="66.0" layoutY="75.0" prefHeight="27.0" prefWidth="460.0" text="Enter the following detalils to check for the availability of the Classroom :" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d4c57" height="408.0" layoutX="-8.0" layoutY="-3.0" stroke="#0a4d4c" strokeType="INSIDE" width="29.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#134451" height="408.0" layoutX="585.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+      <Ellipse fill="#768594" layoutX="169.0" layoutY="40.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="411.0" layoutY="40.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#86a3a8" height="1.0" layoutX="213.0" layoutY="54.0" stroke="#0a4d4c" strokeType="INSIDE" width="156.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c7686" height="14.0" layoutX="-7.0" layoutY="393.0" stroke="#0a4d4c" strokeType="INSIDE" width="620.0" />
+      <Ellipse fill="#768594" layoutX="600.0" layoutY="391.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b7480" height="14.0" layoutX="-7.0" layoutY="-7.0" stroke="#0a4d4c" strokeType="INSIDE" width="620.0" />
+      <Ellipse fill="#768594" layoutX="600.0" layoutY="7.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="8.0" layoutY="7.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="8.0" layoutY="393.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>

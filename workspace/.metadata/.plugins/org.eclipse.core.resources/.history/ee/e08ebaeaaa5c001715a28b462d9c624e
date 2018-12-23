@@ -1,0 +1,304 @@
+package lab;
+
+import java.io.IOException;
+
+class Graph{
+	int v;
+	int e;
+	listnode adj[];
+	Graph(int v,int e){
+		this.v=v;
+		this.e=e;
+		adj=new listnode[v+1];
+	}
+}
+
+class listnode{
+	int vertxno;
+	listnode next;
+	
+	int colour;
+	int visit;
+	
+	listnode(){
+		next=null;
+		colour=-1;
+		visit=-1;
+	}
+	
+}
+
+class queue{
+	
+	int size;
+	int front;
+	int rear;
+	//int[] n;
+	int[] qu;
+	
+	/*queue( int[] vis,int s)
+	{
+		size=s;
+		front=-1;
+		rear=-1;
+		n=vis;
+		qu=new int[s];		
+		
+	} */
+	
+	queue( int s)
+	{
+		size=s;
+		front=-1;
+		rear=-1;
+		
+		qu=new int[s];		
+		
+	}
+	
+	public void Enqueue(int v)
+	{
+		//nodearr newnode=new nodearr(v);
+		//System.out.print(qu[rear+1]+" ");
+		rear=rear+1;
+		qu[rear]=v;
+		if(front==-1){
+			front=rear;
+		}
+	}
+	
+	public boolean isEmpty(){
+		if(front==-1){
+			return true;
+		}
+		return false;
+	}
+	
+	public int Dequeue()
+	{
+		int dq=qu[front];
+		//System.out.print(front+" "+rear);
+		if((front==rear))		
+		{
+			front=-1;
+			rear=-1;
+		}
+		
+		
+		
+		else{
+			front=front+1;
+		}
+		
+		return dq;
+	}
+}
+
+
+public class bipartite 
+{
+	
+	queue q;
+    listnode[] graph;
+	int size;
+	listnode[] info;
+	
+	public bipartite(int ver,listnode[] g,listnode[] i)
+	{
+		
+		size=ver;
+		graph=g;
+		info=i;
+		q=new queue(ver);
+		
+			}
+	
+	public boolean bfs(int src)
+	{  listnode temp=new listnode();
+		q.Enqueue(src);
+		info[src].colour=1;
+		info[src].visit=1; 
+		//System.out.print(q.front); //0
+		while(!q.isEmpty()){
+			int u=q.Dequeue();
+			//System.out.print(q.Dequeue());
+		 	//System.out.println(graph[u].vertxno+""+"dequedvwer"+info[graph[u].vertxno].colour);
+			 
+			 //visited
+			//graph[u].colour=1;
+			
+			temp=graph[u];
+			
+			while(temp.next!=null){
+				//temp=graph[u].next;
+				//System.out.println(temp.next.vertxno);
+				if((info[temp.next.vertxno].colour==-1)){
+					//System.out.println(temp.next.vertxno+" "+"unvisited neighbour");
+					//temp.next.colour=1-graph[u].colour;
+					info[temp.next.vertxno].colour=1-info[graph[u].vertxno].colour;
+					
+					info[temp.next.vertxno].visit=1;
+					
+					q.Enqueue(temp.next.vertxno);
+					//temp.next.visit=1;
+				}
+				else if((info[temp.next.vertxno].colour==info[graph[u].vertxno].colour)){
+				
+					return false;
+				}
+				
+				temp=temp.next;
+			}
+			
+			
+		}
+		return true;
+		
+		
+		
+	}
+	
+	
+	
+	 public static void main(String[] args) throws IOException {
+			// TODO Auto-generated method stub
+			
+			Reader.init(System.in); 
+			int n=Reader.nextInt();
+			int e=Reader.nextInt();
+			
+			Graph g=new Graph(n,e);
+			listnode[] inf=new listnode[n+1];
+			for(int i=1;i<=n;i++){
+				g.adj[i]=new listnode();
+				g.adj[i].vertxno=i;
+				//g.adj[i].next=null;
+				
+				
+			}
+			
+			
+			int src = 0;
+			for(int i=0;i<e;i++)
+			{
+				int x=Reader.nextInt();
+				int y=Reader.nextInt();
+				
+				inf[x]=new listnode();
+				inf[y]=new listnode();
+				inf[x].vertxno=x;
+				inf[y].vertxno=y;
+				src=x;
+				int x1=x;
+				int y1=y;
+				listnode temp=new listnode();
+				listnode temp1=new listnode();
+				temp1.vertxno=y;
+				temp=g.adj[x].next;
+				//System.out.println(temp.next.vertxno);
+				g.adj[x].next=temp1;
+				temp1.next=temp;
+				listnode temp2=new listnode();
+				temp2.vertxno=x1;
+				temp=g.adj[y1].next;
+				//System.out.println(temp.next.vertxno);
+				g.adj[y1].next=temp2;
+				temp2.next=temp;
+				
+			    
+				
+				
+			}
+			
+		
+			
+			bipartite obj=new bipartite(n,g.adj,inf);
+			//System.out.println(obj.bfs(src));
+			int flag=1;
+			int c1=0;
+			int c2=0;
+			if(obj.bfs(src)){
+			   for(int i=1;i<=n;i++)
+			{
+				if(obj.info[i]!=null && obj.info[i].visit==-1){
+					flag=0;
+					break;
+				}
+				else if(obj.info[i]!=null && obj.info[i].visit==1){
+					if(obj.info[i].colour==1){
+						c1=c1+1;
+					}
+					else if(obj.info[i].colour==0){
+						c2=c2+1;
+					}
+				}
+				
+			}
+			   //System.out.println("flag"+""+flag+" "+c1+" "+c2);
+			   
+			   if(flag==0){
+				   System.out.println(-1);
+			   }else
+			   {
+				   int[] arr1=new int[c1];
+				   int[] arr2=new int[c2];
+				   c1=0;c2=0;
+				   for(int i=1;i<=n;i++)
+					{
+					
+					 if(inf[i]!=null && inf[i].visit==1){
+							if(inf[i].colour==1){
+								arr1[c1]=inf[i].vertxno;
+								c1=c1+1;
+							}
+							else if(inf[i].colour==0){
+								arr2[c2]=inf[i].vertxno;
+								c2=c2+1;
+							}
+						}
+						
+					}
+				   
+				  System.out.println(arr1.length);
+				   for(int i=0;i<arr1.length;i++){
+					 System.out.print(arr1[i]+" ");
+				   }
+				   System.out.println();
+				System.out.println(arr2.length);
+				   for(int i=0;i<arr2.length;i++){
+					 System.out.print(arr2[i]+" ");
+				   }
+				   
+			   }
+			
+			}
+			else{
+				   System.out.println(-1);
+			}
+			
+			
+			
+			for(int i=1;i<=n;i++)
+			{
+				
+				{if(inf[i]!=null){
+					System.out.println(inf[i].vertxno+" "+inf[i].colour);
+					//g.adj[i]=g.adj[i].next;
+				}
+				
+			}
+				System.out.println(i+"hi in if");
+			} 
+				
+			
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	 }
+}

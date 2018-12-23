@@ -1,0 +1,119 @@
+
+import java.io.IOException;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
+
+
+
+
+/** Class for buffered reading int and double values */
+class Reader{
+    static BufferedReader reader;
+    static StringTokenizer tokenizer;
+
+    /** call this method to initialize reader for InputStream */
+    static void init(InputStream input) {
+        reader = new BufferedReader(
+                     new InputStreamReader(input) );
+        tokenizer = new StringTokenizer("");
+    }
+
+    /** get next word */
+    static String next() throws IOException {
+        while ( ! tokenizer.hasMoreTokens() ) {
+            //TODO add check for eof if necessary
+            tokenizer = new StringTokenizer(
+                   reader.readLine() );
+        }
+        return tokenizer.nextToken();
+    }
+
+    static int nextInt() throws IOException {
+        return Integer.parseInt( next() );
+    }
+    static long nextLong() throws IOException {
+        return Long.parseLong( next() );
+    }
+    static double nextDouble() throws IOException {
+        return Double.parseDouble( next() );
+    }
+}
+public class Maycp3 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		Reader.init(System.in);
+		int n=Reader.nextInt();
+		int k=Reader.nextInt();
+		
+		long[] arr=new long[n];
+		long[] arr1=new long[n-k+1];
+		
+		PriorityQueue<Long> pq=
+                new PriorityQueue<Long>();
+		
+		
+		for(int i=0;i<n;i++)
+		{
+			long num=Reader.nextLong();
+			arr[i]=num;
+		}
+		long sum=0;
+		long[] arr2=new long[n-k+1];
+		for(int i=0;i<k;i++)
+		{
+			pq.add(arr[i]);
+			sum=sum+arr[i];
+		}
+		long max;
+		arr1[0]=pq.peek();
+		arr2[0]=sum;
+		max=arr2[0]-k*arr1[0];
+		for(int i=k;i<n;i++)
+		{
+			
+			if(arr[i]>pq.peek())
+			{
+				
+				arr1[i-k+1]=pq.peek();
+				pq.add(arr[i]);
+			}
+			else
+			{
+				pq.add(arr[i]);
+				arr1[i-k+1]=pq.peek();
+			}
+			
+			sum=sum-arr[i-k]+arr[i];
+			arr2[i-k+1]=sum;
+			
+			if(max>arr2[i-k+1]-k*arr1[i-k+1])
+			{
+				max=arr2[i-k+1]-k*arr1[i-k+1];
+			}
+			
+			
+		}
+		
+		
+		System.out.println(max);
+		/*for(int i=0;i<arr1.length;i++)
+		{
+			System.out.println(arr1[i]);
+		}
+		*/
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

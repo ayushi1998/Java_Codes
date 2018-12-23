@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5ea89b" height="39.0" layoutX="-1.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="254.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5ea89b" height="39.0" layoutX="4.0" layoutY="417.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="254.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4a9e99" height="457.0" layoutX="242.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" width="411.0" />
+      <Button layoutX="407.0" layoutY="296.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="89.0" text="Next">
+         <font>
+            <Font name="Geneva" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="219.0" fitWidth="212.0" layoutX="14.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
+      <Circle fill="#294b6b" layoutX="22.0" layoutY="18.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="213.0" layoutY="436.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="213.0" layoutY="18.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c615b" height="457.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="8.0" />
+      <Circle fill="#294b6b" layoutX="22.0" layoutY="437.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="194.0" layoutY="18.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="182.0" layoutY="18.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="170.0" layoutY="18.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="194.0" layoutY="436.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="182.0" layoutY="436.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#294b6b" layoutX="170.0" layoutY="436.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Arc fill="#3c5165" layoutX="74.0" layoutY="100.0" length="270.0" radiusX="52.0" radiusY="49.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+      <Label layoutX="248.0" layoutY="174.0" prefHeight="39.0" prefWidth="219.0" text="Enter the amount of storage " textFill="WHITE">
+         <font>
+            <Font name="Geneva" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="467.0" layoutY="181.0" prefHeight="32.0" prefWidth="167.0" promptText="Address" />
+      <Label layoutX="392.0" layoutY="241.0" prefHeight="16.0" prefWidth="254.0" text="40 GB of storage is available on device." textFill="WHITE">
+         <font>
+            <Font name="Geneva" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

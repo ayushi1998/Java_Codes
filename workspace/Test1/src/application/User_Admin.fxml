@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0e0e1" height="400.0" layoutX="-1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c747c" height="50.0" stroke="#0a4d4c" strokeType="INSIDE" width="600.0" />
+      <HBox layoutX="-5.0" layoutY="4.0" prefHeight="42.0" prefWidth="611.0" spacing="20.0">
+         <children>
+            <Region prefHeight="37.0" prefWidth="2.0" />
+            <Label prefHeight="32.0" prefWidth="251.0" text="Hi! You've been successfully logged in!" textFill="WHITE" />
+            <Region prefHeight="38.0" prefWidth="83.0" />
+            <Label prefHeight="26.0" prefWidth="105.0" text="Want to Logout?" textFill="WHITE" />
+            <Button mnemonicParsing="false" text="Logout" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="22.0" layoutY="51.0" prefHeight="338.0" prefWidth="179.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Admin_Logo.png" />
+               </image>
+            </ImageView>
+            <TextArea prefHeight="121.0" prefWidth="160.0" promptText="Add Tasks for the day" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="209.0" layoutY="51.0" prefHeight="363.0" prefWidth="330.0">
+         <children>
+            <HBox prefHeight="73.0" prefWidth="360.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="212.0" text="View  Availability of Classroom" />
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="93.0" text="View" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="20.0" prefHeight="73.0" prefWidth="360.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="214.0" text="Add a Classroom Booking" />
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="93.0" text="Add" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="93.0" prefHeight="73.0" prefWidth="360.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="214.0" text="Cancel a Classroom Booking" />
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="93.0" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="166.0" prefHeight="73.0" prefWidth="360.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="213.0" text="Check for Requests" />
+                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="93.0" text="Check" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f2b2f" height="356.0" layoutX="-1.0" layoutY="46.0" stroke="#0a4d4c" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#093339" height="356.0" layoutX="586.0" layoutY="46.0" stroke="#0a4d4c" strokeType="INSIDE" width="19.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#356e75" height="14.0" layoutX="1.0" layoutY="386.0" stroke="#0a4d4c" strokeType="INSIDE" width="594.0" />
+      <Ellipse fill="#768594" layoutX="9.0" layoutY="50.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="9.0" layoutY="386.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="595.0" layoutY="386.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="593.0" layoutY="52.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>

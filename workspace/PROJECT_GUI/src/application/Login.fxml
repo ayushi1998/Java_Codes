@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Login_controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c7573" height="394.0" layoutX="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="8.0" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c8dddd" height="333.0" layoutX="14.0" layoutY="25.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="4.0" width="295.0" />
+      <HBox layoutX="324.0" layoutY="65.0" prefHeight="68.0" prefWidth="248.0" spacing="20.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="78.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="Geneva" size="13.0" />
+               </font></Label>
+            <TextField fx:id="email" prefHeight="28.0" prefWidth="133.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="321.0" layoutY="139.0" prefHeight="68.0" prefWidth="248.0" spacing="20.0">
+         <children>
+            <Label prefHeight="29.0" prefWidth="84.0" text="Password" textFill="WHITE" />
+            <PasswordField fx:id="password" prefHeight="31.0" prefWidth="133.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="submit" layoutX="401.0" layoutY="248.0" mnemonicParsing="false" onAction="#submit_click" prefHeight="45.0" prefWidth="90.0" text="Submit" />
+      <ImageView fitHeight="239.0" fitWidth="248.0" layoutX="38.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@Login_logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

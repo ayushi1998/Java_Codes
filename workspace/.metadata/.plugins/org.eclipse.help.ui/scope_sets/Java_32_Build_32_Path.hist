@@ -1,0 +1,4 @@
+#Fri Sep 29 07:47:27 IST 2017
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=Java Build Path

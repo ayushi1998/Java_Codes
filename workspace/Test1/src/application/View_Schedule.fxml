@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#388390" height="408.0" layoutX="-4.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="609.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="167.0" layoutY="14.0" prefHeight="32.0" prefWidth="221.0" text="Time Table">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fixedCellSize="0.0" layoutX="66.0" layoutY="138.0" prefHeight="165.0" prefWidth="483.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="WeekDay" />
+          <TableColumn prefWidth="75.0" text="Course" />
+            <TableColumn prefWidth="75.0" text="Credits" />
+            <TableColumn prefWidth="90.0" text="CourseCode" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d4c57" height="408.0" layoutX="-4.0" layoutY="-4.0" stroke="#0a4d4c" strokeType="INSIDE" width="21.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d4c57" height="408.0" layoutX="586.0" layoutY="-4.0" stroke="#0a4d4c" strokeType="INSIDE" width="21.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d4c57" height="5.0" layoutX="177.0" layoutY="61.0" stroke="#0a4d4c" strokeType="INSIDE" width="221.0" />
+   </children>
+</Pane>

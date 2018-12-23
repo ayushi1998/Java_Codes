@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;classes.User.usertype&apos; in &apos;classes.User&apos;&#x0A;- Original project: &apos;PROJECT_GUI&apos;&#x0A;- Original element: &apos;classes.User.usertype&apos;&#x0A;- Getter method name: &apos;getUsertype&apos;&#x0A;- Setter method name: &apos;setUsertype&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;usertype&apos;" flags="589830" getter="getUsertype" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;classes{User.java[User^usertype" insertion="0" setter="setUsertype" stamp="1510370831152" version="1.0" visibility="1"/>
+</session>

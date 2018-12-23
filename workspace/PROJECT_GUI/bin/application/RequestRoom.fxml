@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Request_room_controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b6c9cd" height="400.0" layoutX="2.0" layoutY="7.0" stroke="#0a4d4c" strokeType="INSIDE" width="609.0" />
+      <Label alignment="CENTER" layoutX="206.0" layoutY="15.0" prefHeight="51.0" prefWidth="201.0" text="Request Room " textFill="#00415b">
+         <font>
+            <Font name="Didot Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="518.0" layoutY="357.0" mnemonicParsing="false" onAction="#back_click" text="Back" />
+      <Label layoutX="70.0" layoutY="66.0" prefHeight="27.0" prefWidth="460.0" text="Enter the following detalils to request for booking a Classroom :" textFill="#060707">
+         <font>
+            <Font name="Geneva" size="13.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d4c57" height="408.0" layoutX="-8.0" layoutY="-3.0" stroke="#0a4d4c" strokeType="INSIDE" width="29.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#134451" height="408.0" layoutX="585.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+      <Ellipse fill="#768594" layoutX="180.0" layoutY="40.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="414.0" layoutY="40.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#86a3a8" height="1.0" layoutX="225.0" layoutY="53.0" stroke="#0a4d4c" strokeType="INSIDE" width="156.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c7686" height="14.0" layoutX="-7.0" layoutY="393.0" stroke="#0a4d4c" strokeType="INSIDE" width="620.0" />
+      <Ellipse fill="#768594" layoutX="600.0" layoutY="391.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b7480" height="14.0" layoutX="-7.0" layoutY="-7.0" stroke="#0a4d4c" strokeType="INSIDE" width="620.0" />
+      <Ellipse fill="#768594" layoutX="600.0" layoutY="7.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="8.0" layoutY="7.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#768594" layoutX="8.0" layoutY="393.0" radiusX="7.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="94.0" layoutY="125.0" prefHeight="27.0" prefWidth="124.0" text="Enter Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="189.0" prefHeight="25.0" prefWidth="112.0" text="Enter Time-Slot">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="253.0" text="Purpose">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="301.0" text="Room preferred">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="submit" layoutX="450.0" layoutY="357.0" mnemonicParsing="false" onAction="#submit_click" text="SUBMIT" />
+      <ComboBox fx:id="classroom" editable="true" layoutX="336.0" layoutY="297.0" prefHeight="25.0" prefWidth="170.0" promptText="Room" />
+      <TextField fx:id="purpose" layoutX="336.0" layoutY="248.0" prefHeight="25.0" prefWidth="170.0" promptText="Purpose" />
+      <DatePicker fx:id="date" layoutX="336.0" layoutY="125.0" prefHeight="27.0" prefWidth="156.0" />
+      <HBox layoutX="343.0" layoutY="176.0" prefHeight="20.0" prefWidth="156.0">
+         <children>
+            <Label text="Hrs" />
+            <TextField fx:id="f_h" prefHeight="9.0" prefWidth="47.0" />
+            <Label text="Mins" />
+            <TextField fx:id="f_m" prefHeight="9.0" prefWidth="47.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="343.0" layoutY="207.0" prefHeight="20.0" prefWidth="156.0">
+         <children>
+            <Label text="Hrs" />
+            <TextField fx:id="t_h" prefHeight="9.0" prefWidth="47.0" />
+            <Label text="Mins" />
+            <TextField fx:id="t_m" prefHeight="9.0" prefWidth="47.0" />
+         </children>
+      </HBox>
+      <Label layoutX="290.0" layoutY="181.0" text="FROM" />
+      <Label layoutX="300.0" layoutY="206.0" text="TO" />
+   </children>
+</Pane>

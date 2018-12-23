@@ -1,0 +1,42 @@
+package lab;
+
+import java.io.IOException;
+
+public class SegMenttree_C {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		Reader.init(System.in); 
+		int n=Reader.nextInt();
+		
+		int[] arr=new int[2*n];
+		int sz=2*n;
+		for(int i=sz-1;i>n;i++)
+		{
+			arr[i]=Reader.nextInt();
+			int cnt=0;
+			if(arr[i]>=10){
+				while(arr[i]!=0)
+				{
+					if(arr[i]%10==0)
+					{
+						cnt=cnt+1;
+						
+					}
+					arr[i]=arr[i]/10;
+				}
+				if(arr[i]==0){
+					cnt=cnt+1;
+				}
+			}
+			arr[i]=cnt;
+			System.out.println(arr[i]);
+		}
+		
+		int q=Reader.nextInt();
+		
+
+		
+	}
+}

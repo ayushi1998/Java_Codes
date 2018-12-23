@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <effect>
+      <Bloom threshold="0.0" />
+   </effect>
+   <center>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Insert Events">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="insert" layoutX="41.0" layoutY="196.0" mnemonicParsing="false" text="Insert" />
+                        <TextArea fx:id="eventid" layoutX="29.0" layoutY="36.0" prefHeight="30.0" prefWidth="200.0" text="Event ID" />
+                        <TextArea fx:id="date" layoutX="267.0" layoutY="36.0" prefHeight="30.0" prefWidth="200.0" text="YYYY-MM-DD&#10;" />
+                        <TextArea fx:id="category" layoutX="29.0" layoutY="124.0" prefHeight="30.0" prefWidth="200.0" text="Category" />
+                        <TextArea fx:id="name" layoutX="29.0" layoutY="80.0" prefHeight="30.0" prefWidth="200.0" text="Name" />
+                        <TextArea fx:id="location" layoutX="267.0" layoutY="80.0" prefHeight="30.0" prefWidth="200.0" text="Location&#10;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Get The Events on the Basis of Location ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="getlocation" layoutX="25.0" layoutY="31.0" prefHeight="32.0" prefWidth="200.0" text="Location" />
+                        <Button fx:id="searchevents" layoutX="25.0" layoutY="82.0" mnemonicParsing="false" text="Search" />
+                        <TextArea fx:id="outputevents" layoutX="286.0" layoutY="14.0" prefHeight="225.0" prefWidth="354.0" text="&#10;Output" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Get the info of Manager on the basis of Position">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="searchmanager" layoutX="32.0" layoutY="70.0" mnemonicParsing="false" text="Search" />
+                        <Label layoutX="25.0" layoutY="119.0" prefHeight="122.0" prefWidth="153.0" text="Output" />
+                        <TextArea fx:id="position" layoutX="32.0" layoutY="23.0" prefHeight="32.0" prefWidth="200.0" text="Position" />
+                        <TextArea fx:id="outputmanager" layoutX="319.0" layoutY="23.0" prefHeight="201.0" prefWidth="242.0" text="Output" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Get Sponsors on the basis of Domain">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="domain" layoutX="29.0" layoutY="20.0" prefHeight="33.0" prefWidth="200.0" text="Domain" />
+                        <Button fx:id="searchsponser" layoutX="29.0" layoutY="74.0" mnemonicParsing="false" text="Search" />
+                        <TextArea fx:id="outputsponser" layoutX="368.0" layoutY="20.0" prefHeight="192.0" prefWidth="200.0" text="Output" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Get the info of the attendees  who are older than the mentioned age and attending the mentined event">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="submitdata" layoutX="32.0" layoutY="84.0" mnemonicParsing="false" text="Submit" />
+                        <TextArea fx:id="age" layoutX="246.0" layoutY="24.0" prefHeight="34.0" prefWidth="200.0" text="Age" />
+                        <TextArea fx:id="eventname" layoutX="26.0" layoutY="24.0" prefHeight="34.0" prefWidth="200.0" text="Event name" />
+                        <TextArea fx:id="outputinfo" layoutX="32.0" layoutY="132.0" prefHeight="117.0" prefWidth="386.0" text="Output" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+</BorderPane>

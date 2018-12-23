@@ -1,0 +1,58 @@
+TEST CASES
+1.
+echo "hi my name is tanish"
+echo
+
+echo -E "'"
+echo -E hey
+
+echo -n "lala"
+echo -n hey 
+
+2.
+pwd
+
+3.
+cd ~
+cd
+cd file  
+cd /home/tanish_gupta/Desktop
+
+4.
+history -c
+history
+
+5.
+exit
+
+6.
+date
+date -R
+date -I
+
+7.
+ls 
+ls -a
+ls -A
+ls temp
+
+8.
+cat temp
+cat -n temp
+cat -E temp
+
+9.
+rm 
+rm -i dir
+rm -i file
+rm -d dir
+rm -d file
+
+10.
+mkdir 
+mkdir -p folder1/folder2/folder3
+mkdir -p folder1
+mkdir folder1
+
+
+

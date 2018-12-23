@@ -1,0 +1,141 @@
+package lab;
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+class Reader{
+    static BufferedReader reader;
+    static StringTokenizer tokenizer;
+
+    /** call this method to initialize reader for InputStream */
+    static void init(InputStream input) {
+        reader = new BufferedReader(
+                     new InputStreamReader(input) );
+        tokenizer = new StringTokenizer("");
+    }
+
+    /** get next word */
+    static String next() throws IOException {
+        while ( ! tokenizer.hasMoreTokens() ) {
+            //TODO add check for eof if necessar
+            tokenizer = new StringTokenizer(
+                   reader.readLine() );
+        }
+        return tokenizer.nextToken();
+    }
+
+    static int nextInt() throws IOException {
+        return Integer.parseInt( next() );
+    }
+	
+    static double nextDouble() throws IOException {
+        return Double.parseDouble( next() );
+    }
+}
+class node{
+	char colour;
+	int value;
+	int d;
+	int f;
+	public node(int val,char c)
+	{
+		value=val;
+		colour=c;
+	}
+	
+}
+public class DepthFirstSearch {
+	int[][] graph;
+	node[] vis;
+	int cnt;
+	public DepthFirstSearch(int[][]g,node[]v)
+	{
+		graph=g;
+		vis=v;
+		cnt=0;
+	}
+	
+	public void dfs()
+	{
+		for(int i=1;i<vis.length;i++){
+			if(vis[i].colour==('w')){
+				//System.out.println(i+"first element");
+				cnt=cnt+1;
+				dfstraversal(i);
+				
+			}
+		}
+		
+		
+	}
+	
+	public void dfstraversal(int u)
+	{
+		vis[u].colour='g';
+		vis[u].value=1;
+		//System.out.println(u);
+		for(int i=1;i<vis.length;i++){
+			if( (graph[u][i]==1))
+			{
+				if(vis[i].colour=='w' )
+				{
+					//System.out.println(i);
+					vis[i].value=1;
+					graph[i][u]=0;
+				    dfstraversal(i);
+			    }
+				/*else if((vis[i].colour=='g') && (vis[i].value==1)){
+					System.out.println("CYCLE" );
+				}*/
+			}
+			
+			
+		}
+		vis[u].colour='b';
+		
+		//System.out.println(u+"F");
+		
+	}
+	
+	
+	
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		Reader.init(System.in); 
+		int c=Reader.nextInt();
+		int ed=Reader.nextInt();
+		int[][] adj=new int[c+1][c+1];
+		
+		// This is when u r making ur own matrix
+	
+		for(int i=0;i<ed;i++)
+		{
+				int n=Reader.nextInt();
+				int m=Reader.nextInt();
+				adj[n][m]=1;
+				adj[m][n]=1;
+			
+		}
+		
+		// Else u need to consider the number of edges and accordingly - no. of vertices *  no. of vertices ki graph banegi
+		
+		node[] visit=new node[c+1];  //size define
+		for(int i=1;i<=c;i++){
+			node newnode=new node(0,'w');
+			visit[i]=newnode;
+			
+		}
+		DepthFirstSearch obj=new DepthFirstSearch(adj,visit);
+		obj.dfs();
+        System.out.println(obj.cnt);
+	
+	
+	
+	}
+}
+
+

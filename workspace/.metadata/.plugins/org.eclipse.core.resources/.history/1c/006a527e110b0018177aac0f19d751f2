@@ -1,0 +1,136 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.StringTokenizer;
+import java.util.PriorityQueue;
+import javafx.util.Pair;
+
+class Reader{
+    static BufferedReader reader;
+    static StringTokenizer tokenizer;
+
+    /** call this method to initialize reader for InputStream */
+    static void init(InputStream input) {
+        reader = new BufferedReader(
+                     new InputStreamReader(input) );
+        tokenizer = new StringTokenizer("");
+    }
+
+    /** get next word */
+    static String next() throws IOException {
+        while ( ! tokenizer.hasMoreTokens() ) {
+            //TODO add check for eof if necessary
+            tokenizer = new StringTokenizer(
+                   reader.readLine() );
+        }
+        return tokenizer.nextToken();
+    }
+
+    static int nextInt() throws IOException {
+        return Integer.parseInt( next() );
+    }
+	
+    static double nextDouble() throws IOException {
+        return Double.parseDouble( next() );
+    }
+
+	 static long nextLong() throws IOException{
+		// TODO Auto-generated method stub
+		return Long.parseLong( next() );
+	}
+}
+
+class list
+{
+	LinkedList< Pair<Integer, Integer> >[] adj;
+	
+	public list(int n)
+	{
+		adj=(LinkedList<Pair<Integer,Integer>>[])new LinkedList[n];
+		 for(int i=0;i<n;i++)
+		 {
+			 adj[i]=new LinkedList<>();
+		 }
+	}
+	
+	 public void edge(int u,int v)
+	 {
+		 adj[u].add(new Pair<>(v,-1));
+	 }
+	 
+	 public void listshow()
+	 {
+		 int i=0;
+		 for (LinkedList< Pair<Integer, Integer> > list : adj) 
+		 {
+	            System.out.print("adjacencyList[" + i + "] -> ");
+	              
+	            for (Pair<Integer, Integer> edge : list) {
+	                System.out.print(edge.getKey() + "(" + edge.getValue() + ")");
+	            }
+	              
+	            i=i+1;
+	            System.out.println();
+	        }
+	 }
+	 
+	
+	
+}
+
+public class Dijk {
+	
+	PriorityQueue<Integer> p;
+	list l;
+	
+	 int[] dist;
+	 
+	 public Dijk(list l)
+	 {
+		 p=new PriorityQueue<Integer>();
+		 this.l=l;
+		 dist=new int[l.adj.length];
+	 }
+	 
+	 
+	 void algo()
+	 {
+		 int src=1;
+		p.add(dist[src]);
+		p.add(5);
+		p.add(2);
+		p.add(3);
+		p.add(7);
+	 }
+	 
+	
+	 
+	
+	 
+	
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		 Reader.init(System.in);
+		 
+		 int level=Reader.nextInt();
+		 int lifts=Reader.nextInt();
+		 
+		 list a=new list(lifts);
+		 
+		 for(int i=0;i<lifts;i++)
+		 {
+			 a.edge(Reader.nextInt(), Reader.nextInt());
+		 }
+		 a.listshow();
+		 
+		 Dijk d=new Dijk(a);
+		 d.algo();
+		 System.out.println(d.p.remove());
+		
+
+	}
+
+}

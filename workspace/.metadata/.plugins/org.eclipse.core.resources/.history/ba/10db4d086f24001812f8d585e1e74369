@@ -1,0 +1,93 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.StringTokenizer;
+
+class Reader{
+    static BufferedReader reader;
+    static StringTokenizer tokenizer;
+
+    /** call this method to initialize reader for InputStream */
+    static void init(InputStream input) {
+        reader = new BufferedReader(
+                     new InputStreamReader(input) );
+        tokenizer = new StringTokenizer("");
+    }
+
+    /** get next word */
+    static String next() throws IOException {
+        while ( ! tokenizer.hasMoreTokens() ) {
+            //TODO add check for eof if necessary
+            tokenizer = new StringTokenizer(
+                   reader.readLine() );
+        }
+        return tokenizer.nextToken();
+    }
+
+    static int nextInt() throws IOException {
+        return Integer.parseInt( next() );
+    }
+	
+    static double nextDouble() throws IOException {
+        return Double.parseDouble( next() );
+    }
+
+	 static long nextLong() throws IOException{
+		// TODO Auto-generated method stub
+		return Long.parseLong( next() );
+	}
+}
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		Reader.init(System.in);
+		int t=Reader.nextInt();
+		for(int i=0;i<t;i++)
+		{
+			int n=Reader.nextInt();
+			HashMap<Long,Long> hm=new HashMap<Long,Long>();		
+			long[] arr=new long[n];long[] darr=new long[n];
+			for(int j=0;j<n;j++)
+			{
+				arr[j]=Reader.nextLong();
+			}
+			Arrays.sort(arr);
+			int j=0;
+			while(j<n)
+			{
+				//System.out.println(j);
+				long cnt=0;
+				while((j<n-1) && arr[j]==arr[j+1])
+				{
+					cnt=cnt+1;
+					//System.out.println(cnt);
+					j=j+1;
+				}
+				//System.out.println(arr[j]);
+				hm.put(arr[j],cnt);
+				
+				j=j+1;
+			}
+			//System.out.println(hm.entrySet());
+			long sum=0;
+			Collection c=hm.values();
+			
+			Iterator it=c.iterator();
+			while(it.hasNext())
+			{
+				Long num=(long) it.next();
+				sum=sum+num;
+			}
+			System.out.println(sum);
+			
+         }
+		
+		
+ }
+
+}

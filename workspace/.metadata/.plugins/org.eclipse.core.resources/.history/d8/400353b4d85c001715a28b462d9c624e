@@ -1,0 +1,155 @@
+package lab;
+
+import java.io.IOException;
+
+class infonode{
+	int val;
+	int present;
+	infonode(int v){
+		present=1;
+		val=v;
+	}
+}
+
+public class E {
+	
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		Reader.init(System.in); 
+		int n=Reader.nextInt();
+		int m=Reader.nextInt();
+		int k=Reader.nextInt();
+		
+		int max1=0;int max2=0;
+		
+		
+		int[] arr1=new int[m];
+		for(int i=0;i<m;i++)
+		{
+			arr1[i] =Reader.nextInt();
+			if(arr1[i]>max1){
+				max1=arr1[i];
+			}
+			
+		}
+		int[] arr2=new int[m];
+		for(int i=0;i<k;i++)
+		{
+			arr2[i] =Reader.nextInt();
+			if(arr2[i]>max2){
+				max2=arr2[i];
+			}
+			
+			
+		}
+		
+		
+		infonode[] arri=new infonode[max1+1];
+		infonode[] arrc=new infonode[max2+1];
+		
+		int c1=0;int c2=0;
+		
+		for(int i=0;i<m;i++){
+			arri[arr1[i]]=new infonode(arr1[i]);
+			//arri[arr1[i]].present=1;
+			//System.out.println(arr1[i]);
+			
+		}
+		for(int i=0;i<k;i++){
+			arrc[arr2[i]]=new infonode(arr2[i]);
+			
+		}
+		
+		int[][] arr3=new int[n][11];
+		
+		for(int i=0;i<n;i++)
+		{
+		
+			int size=Reader.nextInt();
+			for(int j=0;j<size;j++){
+				arr3[i][j]=Reader.nextInt();
+			}
+		}
+		for(int i=0;i<n;i++)
+		{
+		
+			
+			for(int j=0;j<11;j++){
+				System.out.print(arr3[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		int si=1;
+		int flagi=0;
+		for(int i=0;i<n;i++)
+		{
+		
+			for(int j=0;j<11;j++){
+				System.out.print(arri[arr3[i][j]].val+" ");
+				if(arri[arr3[i][j]]!=null && arri[arr3[i][j]].present==1){
+					if(arr3[i][j]==1){
+						flagi=1;
+						break;
+					}
+					else{
+						flagi=1;
+						si=si+1;
+						break;
+					}
+				}
+				
+				else if(arrc[arr3[i][j]]!=null){
+					if(arr3[i][j]!=1){
+						si=si+1;
+					}
+				}
+			}
+			
+			if(flagi==1){
+				break;
+			}
+		}
+		int sc=1;
+		int flagc=0;
+		for(int i=0;i<n;i++)
+		{
+		
+			for(int j=0;j<11;j++){
+				if(arrc[arr3[i][j]]!=null && arrc[arr3[i][j]].present==1){
+					if(arr3[i][j]==1){
+						flagc=1;
+						break;
+					}
+					else{
+						flagc=1;
+						sc=sc+1;
+						break;
+					}
+				}
+				
+				else if (arrc[arr3[i][j]]!=null){
+					if(arr3[i][j]!=1){
+						sc=sc+1;
+					}
+				}
+			}
+			if(flagc==1){
+				break;
+			}
+		}
+		
+		if(flagc==1 && flagi==1){
+			System.out.println(si+sc);
+		}
+		else{
+			System.out.println("impossible");
+		}
+		
+		
+
+}
+}

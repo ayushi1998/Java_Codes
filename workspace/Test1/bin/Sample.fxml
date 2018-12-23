@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.4498327759197324" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.57" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c7573" height="398.0" layoutX="2.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+            <Label layoutX="68.0" layoutY="29.0" prefHeight="41.0" prefWidth="129.0" text="     Welcome!  To" textFill="#fff7f7">
+               <font>
+                  <Font name="Geneva" size="13.0" />
+               </font></Label>
+            <ImageView fitHeight="240.0" fitWidth="218.0" layoutX="42.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Screen%20Shot%202017-10-17%20at%209.14.07%20AM.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="32.0" layoutY="329.0" prefHeight="41.0" prefWidth="175.0" text="Already a member?" textAlignment="CENTER" textFill="WHITE" />
+            <Button layoutX="161.0" layoutY="338.0" mnemonicParsing="false" text="Login">
+               <font>
+                  <Font name="Cochin" size="13.0" />
+               </font></Button>
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d7d7" height="398.0" layoutX="-4.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="332.0" />
+            <Button alignment="BOTTOM_CENTER" layoutX="99.0" layoutY="357.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" text="Submit">
+               <font>
+                  <Font name="Cochin" size="13.0" />
+               </font></Button>
+            <TextField layoutX="140.0" layoutY="129.0" prefHeight="27.0" prefWidth="119.0" />
+            <PasswordField layoutX="139.0" layoutY="172.0" prefHeight="27.0" prefWidth="119.0" />
+            <Label layoutX="29.0" layoutY="132.0" text="Email">
+               <font>
+                  <Font name="Geneva" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="172.0" text="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="86.0" layoutY="246.0" mnemonicParsing="false" text="Faculty" textFill="#0a0909">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="84.0" layoutY="280.0" mnemonicParsing="false" text="Student" textFill="#171515">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="84.0" layoutY="315.0" mnemonicParsing="false" text="Admin">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="95.0" layoutY="66.0" prefHeight="41.0" prefWidth="146.0" text="  Sign Up">
+               <font>
+                  <Font name="Marker Felt Thin" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="211.0" text="User Type">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </items>
+</SplitPane>
